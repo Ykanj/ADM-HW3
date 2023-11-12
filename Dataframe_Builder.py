@@ -4,13 +4,14 @@ import requests
 from bs4 import BeautifulSoup 
 from tqdm import tqdm
 import concurrent.futures
-
+# I initialized a dataframe with all  the columns we need
 df = pd.DataFrame(columns=[
     'courseName', 'universityName', 'facultyName', 'isItFullTime',
     'description', 'startDate', 'fees', 'modality', 'duration',
     'city', 'country', 'administration', 'url', 'cleaned description'])
 
 root_dir = r"C:\Users\youse\Desktop\ADM Hw3\Degrees by Page"
+# using threadpoolexecutor again to speed up the process 
 with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
     for subdir, dirs, files in tqdm(os.walk(root_dir)):
         for file in files:
@@ -19,7 +20,9 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
                 soup = BeautifulSoup(html_content, "html.parser")
 
                 courseName = universityName = facultyName = isItFullTime = description = startDate = fees = modality = duration = city = country = administration = url = None
-
+                
+                # I used inspect element to find the relevant information for each column, and used a try except statement to avoid errors
+                # at individual columns while still gathering the rest of the data
                 try:
                     courseName = soup.find("h1", class_="text-white course-header__course-title")["data-permutive-title"]
                 except:
@@ -76,9 +79,9 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
                 df.loc[len(df)] = [courseName, universityName, facultyName, isItFullTime, description, startDate, fees, modality, duration, city, country, administration, url]
                 # Here we save the last row of the data frame as an individual tsv file
                 df.iloc[-1].to_csv(f"c:\\Users\\youse\\Desktop\\ADM Hw3\\Databases\\Each row tsv\\ row {len(df)}.tsv", sep="\t", index = False)
-                # and here using the cleaning function we wrote and imported from NLTK_cleaning we add a cleaned description column
                 
         print(df.shape)
+    # and here using the cleaning function we wrote and imported from NLTK_cleaning we add a cleaned description column    
     for i in range(len(df)):
         text = df["description"][i]
         try:
