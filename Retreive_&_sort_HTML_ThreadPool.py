@@ -4,6 +4,20 @@ from tqdm import tqdm
 import os
 import concurrent.futures
 
+# I defined a function to request the url and return it as a prettified soup HTML,
+# I first tired running this code with concurrent.futures.ThreadPoolExecutor()
+# but that is preferred for cpu bound tasks, since here in web scraping we are
+# I/O bound, i found a better solution to be asyncio, which instead of splitting 
+# rescources between cores on the cpu like ThreadPool, asyncio sends out multiple 
+# requests at once and proceeds with iterating, and updates the opened file when
+# it receives a result from the sent request. Here aiohttp handles sending out 
+# the requests, while asynchio organizes and handles the scheduling
+
+
+# This method turned out very fast ~20 min, except for the fact thet the website started sending
+# blank responses as a result of the server being requested from multiple times, so we turn back
+# to Threadpool 
+
 # First lets create a folder for each page to store its degree HTML 
 for i in range(1,401):
     path_page = r"C:\Users\youse\Desktop\ADM Hw3\Degrees by Page\page " + str(i) 
