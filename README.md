@@ -5,7 +5,8 @@ Code:
 - Retreive_&_sort_HTML_ThreadPool.py, sent out one request at a time, but used a library to split all work between all cores of the cpu.
 - Datafram_builder.py reads every html we have saved, retreives the data we need from it, and builds a pandas dataframe while saving every row as a tsv file. It then calls the cleaning function we wrote in NLTK_cleaning to add a cleaned column
 - NLTK_cleaning has a function written to clean, tokenize, strip and lemmatize a given text.
- Data: 
+  
+Data: 
 - Each_Degree_URL.txt has the url of each of the 6000 degrees on each line.
 - each_row_tsv.zip has the tsv file of every row in our data frame.
 - Parsed_database.csv is a csv file of our entire dataset.
