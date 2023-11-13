@@ -5,6 +5,7 @@ Code:
 - Retreive_&_sort_HTML_ThreadPool.py, sent out one request at a time, but used a library to split all work between all cores of the cpu.
 - Datafram_builder.py reads every html we have saved, retreives the data we need from it, and builds a pandas dataframe while saving every row as a tsv file. It then calls the cleaning function we wrote in NLTK_cleaning to add a cleaned column
 - NLTK_cleaning has a function written to clean, tokenize, strip and lemmatize a given text.
+- Currency_Format.py converts the "fees" columns to a "cleaned fee (EUR)" column using regex and a convert_currency library
   
 Data: 
 - Each_Degree_URL.txt has the url of each of the 6000 degrees on each line.
