@@ -3,10 +3,10 @@ from tqdm import tqdm
 import pickle
 import re
 
-vocab = pd.read_csv(r"C:\Users\youse\Desktop\ADM Hw3\Vocabulary.csv")
+vocab = pd.read_csv(r"Databases\Vocabulary.csv")
 vocab = vocab.drop(columns=["Unnamed: 0"])
 
-degrees = pd.read_csv(r"C:\Users\youse\Desktop\ADM Hw3\Databases\Parsed_database.csv")
+degrees = pd.read_csv(r"Databases\Parsed_database.csv")
 degrees = degrees.drop(columns=["Unnamed: 0"])
 
 inverted_index = {}

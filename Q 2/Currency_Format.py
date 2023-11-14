@@ -6,7 +6,7 @@ from currency_converter import CurrencyConverter
 c = CurrencyConverter()
 
 # we import in our dataframe and drop the first column which excel converts into an index column (giving us 2)
-degrees = pd.read_csv(r"C:\Users\youse\Desktop\ADM Hw3\Databases\Parsed_database.csv")
+degrees = pd.read_csv(r"Databases\Parsed_database.csv")
 degrees = degrees.drop(columns=["Unnamed: 0"])
 
 # we create a column for our new corrected fee which we will report in euros 
@@ -63,5 +63,5 @@ def currency_format(text, country):
 for i in tqdm(range(len(degrees))):
     degrees.loc[i, "corrected fee (EUR)"] = currency_format(degrees.loc[i, "fees"], degrees.loc[i, "country"])
 
-degrees.to_csv(r"c:\Users\youse\Desktop\ADM Hw3\Parsed_database.csv")
+degrees.to_csv(r"Databases\Parsed_database.csv")
 
