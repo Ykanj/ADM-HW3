@@ -13,3 +13,5 @@ Data:
 - Each_Degree_URL.txt has the url of each of the 6000 degrees on each line.
 - each_row_tsv.zip has the tsv file of every row in our data frame.
 - Parsed_database.csv is a csv file of our entire dataset.
+- Vocabulary.csv is a saved csv file of our unique vocabulary list.
+- saved_dictionary.pkl is our inverted index dictionary saved with the python library pickle.
