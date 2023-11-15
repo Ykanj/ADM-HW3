@@ -29,6 +29,7 @@
 - Each_Degree_URL.txt has the url of each of the 6000 degrees on each line.
 - each_row_tsv.zip has the tsv file of every row in our data frame.
 - Parsed_database.csv is a csv file of our entire dataset.
+- Degrees_by_page.zip is a zip file of 400 folders each with the HTMLs of the 15 degrees found per page. It was too large to upload to github.
 
 ### Q2
 - Vocabulary.csv is a saved csv file of our unique vocabulary list.
