@@ -14,7 +14,7 @@ for i in tqdm(range(len(degrees))):
     text = str(text)
     text = text.split(" ")
     for n in text:
-        if (not n.isdigit()) and (n not in vocab["term"].unique()):
+        if (not n.isdigit()) and (n not in vocab["term"].unique()): 
             vocab.loc[len(vocab)] = [n , term_count]
             term_count += 1            
 

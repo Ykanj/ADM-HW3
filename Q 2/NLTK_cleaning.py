@@ -13,12 +13,14 @@ from nltk.stem import WordNetLemmatizer
 # is more computationally costly than stemming.
 
 def clean(text: str):
+    
     # I removed stopwords and punctuation and transformed the entire description to lowercase
     tokens = nltk.word_tokenize(text.lower())
     trash = set(stopwords.words("english") + list(string.punctuation) + list("’"))
     tokens = [token for token in tokens if token not in trash]
     stemmed = []
     lemmatized = []
+
     # I stemmed and lemmatized the multiple descriptions to compare results and reach a choice between the 2 methods
     # After viewing the results i decided to continue with lemmatization as it gave more generalized results and served 
     # the same purpose as stemming

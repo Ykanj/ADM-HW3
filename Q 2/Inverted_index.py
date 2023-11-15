@@ -18,8 +18,7 @@ for i in tqdm(range(len(vocab))):
     term_id = vocab["term_id"][i]
     degrees["cleaned description"].fillna("", inplace=True)
     documents = degrees[degrees["cleaned description"].str.contains(re.escape(word), case=False)].index.tolist()
-    inverted_index[term_id] = documents
-    
+    inverted_index[term_id] = documents 
 
 print(inverted_index)
 

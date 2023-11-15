@@ -24,7 +24,7 @@ def idf(term, df):
     return math.log((len(df))/(count))        
 
 # the dictionary was created in the same approach to the inverted index, with the addition of a for loop to calculate tf-idf 
-# values for each term in each document we know its found in.
+# values for each term in each document we know its found in. Each document and the term tf-idf was saved as a tuple in a list as a value
 for i in tqdm(range(len(vocab))):
     word = vocab["term"][i] 
     word = str(word)
