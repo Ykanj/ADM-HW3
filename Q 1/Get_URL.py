@@ -6,7 +6,7 @@ from tqdm import tqdm
 # in this python file we will collect all these urls and save them to a text file
 
 url = "https://www.findamasters.com/masters-degrees/msc-degrees/"
-file = r"C:\Users\youse\Desktop\ADM Hw3\Each Degree URL.txt"
+file = r"Databases\Each Degree URL.txt"
 page_number = 1
 
 

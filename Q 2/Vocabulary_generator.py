@@ -7,6 +7,8 @@ degrees = pd.read_csv(r"Databases\Parsed_database.csv")
 degrees = degrees.drop(columns=["Unnamed: 0"])
 
 term_count = 100000
+
+# we created a database with a 6 digit term ID for each unique term found in our corpus
 for i in tqdm(range(len(degrees))):
     text = degrees["cleaned description"][i]
     text = str(text)
