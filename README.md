@@ -23,6 +23,8 @@
 ### CLQ (Paolo)
 
 ### AQ (Paolo)
+- Algorithm.py is an algorithm that solves our Algorithm question in the homework.
+- ChatGPT_conversation.md is a markdown file that contains our chatGPT conversation regarding the algorithm question.
   
 ## Data: 
 ### Q1
