@@ -1,0 +1,30 @@
+def timetablemaker(d,sH,minT,maxT):
+    if sum(minT)>sH or sum(maxT)<sH:
+        print('NO')
+    else:
+        
+        time_table=minT
+        a=sH-sum(minT)
+        while a>0:
+            for i in range(d):
+                if time_table[i]<maxT[i]:
+                    time_table[i] += 1
+                    break
+            a -= 1
+        print('YES')
+        print(*time_table)
+        
+if _name_ == '_main_':
+    d, sH= map(int,input().split(' '))
+    minT=[]
+    maxT=[]
+    for i in range(d):
+        mt, Mt= map(int,input().split(' '))
+        minT.append(mt)
+        maxT.append(Mt)
+    timetablemaker(d,sH,minT,maxT)
+#the computational cost depends on three variables that are sumhours, the sum of all the minimun hours and the number of days
+#the algorithm is O(d*(sH-sum(minT))) in fact aside from the two cicle evey other operation happens in constant time 
+#we can consider the worst case for the while cicle as if sum(minT)=0, in this case the algorithm is O(d*sH)
+#It's difficult to say whether the algorithm is actually optimal or not but it seems like it doesn't have any unnecessary 
+#passages
