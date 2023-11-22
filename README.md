@@ -13,6 +13,7 @@
 - Inverted_index.py creates a simple inverted index for all unique words found.
 - first_search_engine.ipynb is a simple search engine that simply looks for words from our query in our degrees and returns matches.
 - TF-IDF.py generates an inverted index dictionary where for each term_id as key, we have a list of tuples of documents it is found in, and it's relative TF-IDF score.
+- TFIDF_search_engine.ipynb a search engine that  returns matches based on the cosine similarity between TF-IDF vectors for query and documents.
 
 ### Q3 (Renato)
 

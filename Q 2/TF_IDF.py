@@ -1,5 +1,6 @@
 import pandas as pd
 from tqdm import tqdm
+import re
 import pickle
 import math
 
@@ -21,7 +22,7 @@ def tf(term, text):
 # is our corpus divided by the number of occurances of each term in each corpus
 def idf(term, df):
     count = df["cleaned description"].apply(lambda x: term in x).sum()
-    return math.log((len(df))/(count))        
+    return math.log((len(df)+1)/(count+1))+1        
 
 # the dictionary was created in the same approach to the inverted index, with the addition of a for loop to calculate tf-idf 
 # values for each term in each document we know its found in. Each document and the term tf-idf was saved as a tuple in a list as a value
@@ -30,7 +31,7 @@ for i in tqdm(range(len(vocab))):
     word = str(word)
     term_id = vocab["term_id"][i]
     degrees["cleaned description"].fillna("", inplace=True)
-    documents = degrees[degrees["cleaned description"].str.contains(word, case=False)].index.tolist()
+    documents = degrees[degrees["cleaned description"].str.contains(re.escape(word), case=False)].index.tolist()
     idf_value = idf(word, degrees)
     results = []
     for document in documents:
