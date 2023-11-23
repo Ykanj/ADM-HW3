@@ -31,6 +31,8 @@
 ### Q5 (Amir)
 
 ### CLQ (Paolo)
+- Header.py to save an individual header row with the column names.
+- TSV_transpsoer.py to transpose each tsv file so that they merge better in our command line.
 
 ### AQ (Paolo)
 - Algorithm.py is an algorithm that solves our Algorithm question in the homework.
@@ -47,3 +49,7 @@
 - Vocabulary.csv is a saved csv file of our unique vocabulary list.
 - saved_dictionary.pkl is our inverted index dictionary saved with the python library pickle.
 - saved_dictionary_tfidf.pkl is our inverted index dictionary including TF-IDF scores saved with the python library pickle.
+
+### CLQ
+- Updated_each_row_tsv.zip is a zip file containing all the same tsv files as the originial zip, but transposed so taht they are easier to work with when merging
+ 
