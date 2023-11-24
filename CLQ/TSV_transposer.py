@@ -13,7 +13,7 @@ for filename in os.listdir(source_directory):
         file_path = os.path.join(source_directory, filename)
         
         df = pd.read_csv(file_path, sep='\t')
-        df_transposed = df.T
+        df_transposed = df.transpose()
         
         save_path = os.path.join(destination_directory, f"transposed_{filename}")
-        df_transposed.to_csv(save_path, sep='\t', index=False, header=False)
+        df_transposed.to_csv(save_path, sep='\t', index=False, header=True)
