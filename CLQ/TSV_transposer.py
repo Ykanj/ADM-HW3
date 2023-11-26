@@ -16,5 +16,5 @@ if not os.path.exists(output_directory):
 #  to transpose and save each tsv file in an updated folder
 
 for i in tqdm(range(len(degrees))):               
-    row = degrees[["courseName", "universityName", "modality", "duration", "city", "country"]].iloc[i].T
+    row = degrees[["courseName", "universityName" ,"duration", "city", "country"]].iloc[i]
     row.to_csv(os.path.join(output_directory, f"row_{i}.tsv"), sep="\t", index= False, header = False)

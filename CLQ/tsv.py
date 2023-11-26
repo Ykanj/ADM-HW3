@@ -18,4 +18,4 @@ for filename in tqdm(os.listdir(source_directory)):
         df_transposed = df.transpose()
         
         save_path = os.path.join(destination_directory, f"transposed_{filename}")
-        df_transposed.to_csv(save_path, sep='\t', index=False , header= False)
+        df_transposed.to_csv(save_path, sep='\t', index=True , header= False)
