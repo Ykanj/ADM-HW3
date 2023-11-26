@@ -28,7 +28,11 @@ Below you will find a detailed table fo contents for our homework. Our answers a
 
 ### Q3 (Renato)
 
+3.1 and 3.2- Q3.ipynb, a Jupyter notebook file, has been crafted to address the inquiry concerning the new search engine. I used Google Drive as the platform for data storage
+
 ### Q4 (Renato)
+
+4.1, 4.2 and 4.3- Q4.ipynb, a Jupyter notebook file, has been crafted to address the inquiry concerning the creation of the map. I used Google Drive as the platform for data storage
 
 ### Q5 (Amir)
 
@@ -52,6 +56,16 @@ Below you will find a detailed table fo contents for our homework. Our answers a
 - Vocabulary.csv is a saved csv file of our unique vocabulary list.
 - saved_dictionary.pkl is our inverted index dictionary saved with the python library pickle.
 - saved_dictionary_tfidf.pkl is our inverted index dictionary including TF-IDF scores saved with the python library pickle.
+
+### Q3
+- Vocabulary.csv is a saved csv file of our unique vocabulary list.
+- 2024 World University Rankings.csv is a Dataframe(2024 World University Rankings) we to build a new scoring function
+- M_d_w_tuit_f.csv is a saved csv file of Masters degrees with tuition fees
+- database_updated.csv is the dataset where was applied text-preprocessing to the column 'description' and adding the column 'fees_USD'
+
+### Q4
+- DB_from_RQ3.csv is a saved csv file of our Database from Question 3.
+- Query_Result.csv is a saved csv file of our query_result from Question 2.
 
 ### CLQ
 - Updated_each_row_tsv.zip is a zip file containing all the same tsv files as the originial zip, but transposed so taht they are easier to work with when merging
