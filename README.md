@@ -1,9 +1,11 @@
 # adm-hw3
+Below you will find a detailed table fo contents for our homework. Our answers are written on python scripts for each question. The main searche engines in Q.2 were on are on two jupyter notebooks.
+
 ## Code:
 ### Q1 (Yousef)
 1.1- Get_URL.py parses through the first 400 pages to retreive all URLs
 
-1.2- Retreive_&_sort_HTML_asyncio.py attempts to reteive the htmls of the 6000 URLs we got, using asynchronous scheduling, but the website was blocking us for 4 out of every 5 requests due to sending out ~8 requests a second.
+1.2- Retreive_&_sort_HTML_asyncio.py attempts to reteive the htmls of the 6000 URLs we got, using asynchronous scheduling, but the website was blocking us for 4 out of every 5 requests due to sending out ~8 requests a second. (IGNORE THIS FILE, this was a failed attempt)
 
 1.2- Retreive_&_sort_HTML_ThreadPool.py, sent out one request at a time, but used a library to split all work between all cores of the cpu.
 
@@ -32,8 +34,9 @@
 
 ### CLQ (Paolo)
 - Header.py to save an individual header row with the column names.
-- TSV_transpsoer.py to transpose each tsv file so that they merge better in our command line.
-
+- TSV_transposer.py to transpose each tsv file so that they merge better in our command line.
+- com_line.sh is our bash script to solve our command line question.
+- output.png is our output  from the command line question.
 ### AQ (Paolo)
 - Algorithm.py is an algorithm that solves our Algorithm question in the homework.
 - ChatGPT_conversation.md is a markdown file that contains our chatGPT conversation regarding the algorithm question.
