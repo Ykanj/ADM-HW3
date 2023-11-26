@@ -4,7 +4,6 @@ from tqdm import tqdm
 
 degrees = pd.read_csv(r"Databases\Parsed_database.csv")
 degrees = degrees.drop(columns=["Unnamed: 0"])
-degrees["description"].apply(lambda x: " ".join(str(x).split()))
 
 destination_directory = r"C:\Users\youse\Desktop\GitHub\adm-hw3\Databases\Each_row_tsv_updated"
 output_directory = os.path.join(destination_directory, "Each row tsv")
